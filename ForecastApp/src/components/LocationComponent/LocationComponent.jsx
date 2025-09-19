@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useFetch } from '../../hooks/useFetch.jsX';
+import { useState, useEffect } from "react";
 
 function LocationComponent() {
   const [location, setLocation] = useState(null);
@@ -19,25 +18,12 @@ function LocationComponent() {
         });
       },
       (err) => {
-        setError("Error al obtener la ubicación: " + err.message);
+        setError("Error: " + err.message);
       }
     );
   }, []);
 
-  const { data, loading, error } = useFetch(`https://api.openweathermap.org/data/3.0/reverse?lat=${location?.latitude}&lon=${location?.longitude}&APPID=${import.meta.env.VITE_APP_API_KEY}`);
-
-  if (loading) return <p>Obteniendo ubicación...</p>;
-  if (error) return <p>Error: {error}</p>;
-
-  return (
-    <div>
-      {location ? (
-        <p>{console.log(data)}</p>
-      ) : (
-        <p>{err}</p>
-      )}
-    </div>
-  );
+  return [location, err];
 }
 
 export default LocationComponent;
