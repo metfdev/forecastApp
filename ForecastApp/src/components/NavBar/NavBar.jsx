@@ -8,8 +8,8 @@ function NavBar() {
     <nav
       className={
         tema === "dark"
-          ? "flex justify-between lg:justify-around items-center py-6  text-gray-300 transition-all duration-300 easy-in-out"
-          : "flex justify-between lg:justify-around items-center py-6  text-gray-900 transition-all duration-300 easy-in-out"
+          ? "flex justify-between lg:justify-around items-center py-2 bg-gray-900 text-gray-300 transition-all duration-300 easy-in-out"
+          : "flex justify-between lg:justify-around items-center py-2 bg-gray-300  text-gray-900 transition-all duration-300 easy-in-out"
       }
     >
       <div className="flex items-center justify-center gap-3">
@@ -18,7 +18,7 @@ function NavBar() {
           src="./public/img/logo.png"
           alt="forecastApp logo"
         />
-        <h2 className="text-2xl font-bold transition-all duration-300 easy-in-out">
+        <h2 className="text-3xl lg:text-4xl font-bold transition-all duration-300 easy-in-out">
           ForecastApp
         </h2>
       </div>
