@@ -8,8 +8,8 @@ function NavBar() {
     <nav
       className={
         tema === "dark"
-          ? "flex justify-between lg:justify-around items-center py-2 bg-gray-900 text-gray-300 transition-all duration-300 easy-in-out"
-          : "flex justify-between lg:justify-around items-center py-2 bg-gray-300  text-gray-900 transition-all duration-300 easy-in-out"
+          ? "flex justify-between lg:justify-around items-center py-4 transition-all duration-300 easy-in-out"
+          : "flex justify-between lg:justify-around items-center py-4 transition-all duration-300 easy-in-out"
       }
     >
       <div className="flex items-center justify-center gap-3">

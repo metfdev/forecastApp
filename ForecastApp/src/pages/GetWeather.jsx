@@ -10,10 +10,6 @@ import { TemaContext } from "../context/themeContext.jsx";
  * @var {Object} tema Objeto que contiene el tema
  * @var {Object} text Objeto que contiene el texto de la ubicación buscada
  * @var {Object} input Objeto que contiene el input
- * @Hooks useContext - Hook que permite acceder a los contextos
- * @Hooks useState - Hook que permite manejar el estado
- * @Hooks useEffect - Hook que permite manejar el efecto
- * @context TemaContext - Contexto que permite manejar el tema
  *
  * @return {JSX.Element} El componente GetWeather
  * @author Miguel Ticaray
@@ -52,7 +48,7 @@ function GetWeather({ latitude, longitude, err=null }) {
 
   if (err) {
     return (
-      <p className={tema === "dark" ? "text-gray-300" : ""}>
+      <p>
         {err}
       </p>
     );
@@ -73,8 +69,8 @@ function GetWeather({ latitude, longitude, err=null }) {
     <div
       className={
         tema === "dark"
-          ? "text-gray-300 w-full flex flex-col items-center justify-center gap-8 lg:gap-12 pb-5"
-          : "text-gray-800 w-full flex flex-col items-center justify-center gap-8 lg:gap-12 pb-5"
+          ? "flex flex-col items-center justify-center gap-8 lg:gap-12"
+          : "flex flex-col items-center justify-center gap-8 lg:gap-12"
       }
     >
       <div className="flex flex-col items-center justify-center gap-4 w-full">

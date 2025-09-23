@@ -10,8 +10,6 @@ import LocationComponent  from "../components/LocationComponent/LocationComponen
  * @var {Object} tema Objeto que contiene el tema
  * @var {Object} location Objeto que contiene la ubicación
  * @var {Object} err Objeto que contiene el error
- * @Hooks useContext - Hook que permite acceder a los contextos
- * @component GetWeather - Componente que obtiene la información del clima
  *
  * @return {JSX.Element} El componente Home de la aplicación
  */
@@ -23,10 +21,11 @@ function Home() {
     <div
       className={
         tema === "dark"
-          ? "flex flex-col gap-4 min-h-screen px-4 py-6 lg:px-8 bg-gradient-to-b from-gray-800 to-gray-900 transition-all duration-500 easy-in-out"
-          : "flex flex-col gap-4 min-h-screen px-4 py-6 lg:px-8 bg-gradient-to-b from-gray-300 to-gray-100 transition-all duration-500 easy-in-out"
+          ? "text-gray-300 flex flex-col gap-12 h-screen min-h-100dvh px-4 lg:px-0 bg-gradient-to-b from-gray-800 to-gray-900 to-85% transition-all duration-500 easy-in-out"
+          : "text-gray-800 flex flex-col gap-12 min-h-screen px-4 lg:px-0 bg-gradient-to-b from-gray-100 to-gray-300 to-85% transition-all duration-500 easy-in-out"
       }
     >
+      <NavBar />
       <GetWeather latitude={location?.latitude} longitude={location?.longitude} err={err} />
     </div>
   );
