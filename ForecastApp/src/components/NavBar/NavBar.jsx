@@ -26,7 +26,7 @@ function NavBar() {
       <Container style="flex items-center justify-center gap-3">
         <img
           className="w-12"
-          src="./public/img/logo.png"
+          src="../../../public/img/logo.png"
           alt="forecastApp logo"
         />
         <h1 className="text-3xl lg:text-4xl font-bold transition-all duration-300 easy-in-out">
