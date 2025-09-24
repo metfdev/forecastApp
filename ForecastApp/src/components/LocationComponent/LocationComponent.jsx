@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
  */
 function LocationComponent() {
   const [location, setLocation] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [err, setError] = useState(null);
 
   useEffect(() => {
@@ -24,14 +25,16 @@ function LocationComponent() {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
         });
+        setLoading(false);
       },
       (err) => {
         setError("Error: " + err.message);
+        setLoading(false);
       }
     );
   }, []);
 
-  return [location, err];
+  return [location, err, loading];
 }
 
 export default LocationComponent;

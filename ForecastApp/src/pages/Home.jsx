@@ -1,10 +1,10 @@
 import { NavBar } from "../components/NavBar/NavBar";
 import { Container } from "../components/Container/Container";
+import { Message } from "../components/Message/Message";
 import { Hero } from "../components/Hero/Hero";
 import { useContext } from "react";
 import { TemaContext } from "../context/themeContext";
-import LocationComponent  from "../components/LocationComponent/LocationComponent";
-
+import LocationComponent from "../components/LocationComponent/LocationComponent";
 
 /**
  * @description Componente Home de la aplicación
@@ -16,7 +16,7 @@ import LocationComponent  from "../components/LocationComponent/LocationComponen
  */
 function Home() {
   const { tema } = useContext(TemaContext);
-  const [location, err] = LocationComponent();
+  const [location, err, loading] = LocationComponent();
 
   return (
     <Container
@@ -27,7 +27,15 @@ function Home() {
       }
     >
       <NavBar />
-      <Hero latitude={location?.latitude} longitude={location?.longitude} err={err} />
+      {loading ? (
+        <Message text="Loading..." styleContrainer="flex items-center justify-center" styleMesage="text-4xl" />
+      ) : (
+        <Hero
+          latitude={location?.latitude}
+          longitude={location?.longitude}
+          err={err}
+        />
+      )}
     </Container>
   );
 }

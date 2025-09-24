@@ -4,7 +4,7 @@ import { DetailsCards } from "../DetailsCards/DetailsCards.jsx";
 import { Button } from "../Button/Button.jsx";
 import { Input } from "../input/Input.jsx";
 import { Container } from "../Container/Container.jsx";
-import { MessageError } from "../MessageError/MessageError.jsx";
+import { Message } from "../Message/Message.jsx";
 
 /**
  * @description Componente que muestra el hero de la aplicación
@@ -60,8 +60,8 @@ function Hero({ latitude, longitude, err = null }) {
 
   if (err) {
     return (
-      <MessageError
-        err={err}
+      <Message
+        text={err}
         styleMesage="flex items-center justify-center gap-4 text-2xl bg-red-600/40 p-4 rounded-2xl lg:w-1/3"
       >
         <Button
@@ -73,7 +73,7 @@ function Hero({ latitude, longitude, err = null }) {
           }
           icon={"fas fa-rotate"}
         />
-      </MessageError>
+      </Message>
     );
   }
 
@@ -90,8 +90,8 @@ function Hero({ latitude, longitude, err = null }) {
 
   if (error) {
     return (
-      <MessageError
-        err={error}
+      <Message
+        text={error}
         styleMesage="flex items-center gap-4 justify-center text-2xl bg-red-600/40 p-4 rounded-2xl lg:w-1/3"
       >
         <Button
@@ -103,7 +103,7 @@ function Hero({ latitude, longitude, err = null }) {
           }
           icon={"fas fa-rotate"}
         />
-      </MessageError>
+      </Message>
     );
   }
 
@@ -150,7 +150,7 @@ function Hero({ latitude, longitude, err = null }) {
           }
         />
       </Container>
-      <main className="w-full md:w-150 lg:w-200 flex flex-col items-center justify-center gap-5 lg:gap-7   shadow-2xl shadow-gray-950/50 rounded-3xl p-8 transition-all duration-300 easy-in-out">
+      <main className="w-full md:w-150 lg:w-200 flex flex-col items-center justify-center gap-5 lg:gap-7 shadow-xl shadow-gray-950/50 rounded-3xl p-8 transition-all duration-300 easy-in-out">
         <Container style="w-full flex items-center justify-around  ">
           <Container style="flex flex-col items-center justify-center gap-5">
             <p className=" text-9xl transition-all duration-300 easy-in-out">
