@@ -2,7 +2,7 @@ import { useEffect, useState, useContext, useRef } from "react";
 import { TemaContext } from "../../context/themeContext.jsx";
 import { DetailsCards } from "../DetailsCards/DetailsCards.jsx";
 import { Button } from "../Button/Button.jsx";
-import { Input } from "../input/Input.jsx";
+import { Input } from "../Input/Input.jsx";
 import { Container } from "../Container/Container.jsx";
 import { Message } from "../Message/Message.jsx";
 
