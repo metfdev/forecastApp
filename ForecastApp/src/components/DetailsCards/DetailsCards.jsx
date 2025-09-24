@@ -4,11 +4,11 @@ import { TemaContext } from "../../context/themeContext";
 /**
  * @description Componente que muestra las tarjetas de información
  * @var {Object} tema - Objeto que contiene el tema (dark o light)
- *
  * @param {Object} titulo - Objeto que contiene el título de la tarjeta
  * @param {Object} icono - Objeto que contiene el icono de la tarjeta
  * @param {Object} info - Objeto que contiene la información de la tarjeta
  * @param {Object} style - Objeto que contiene el estilo de la tarjeta (default: "w-full flex flex-col items-start justify-center gap-1 p-4 backdrop-blur-2xl rounded-3xl")
+ *
  * @return {JSX.Element} - El componente DetailsCards
  * @author Miguel Ticaray
  */

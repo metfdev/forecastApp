@@ -22,8 +22,8 @@ function Home() {
     <Container
       style={
         tema === "dark"
-          ? "text-gray-300 flex flex-col gap-4 min-h-screen px-4 pb-6 lg:px-0 bg-gradient-to-b from-gray-800 to-gray-900 to-85% transition-all duration-500 easy-in-out"
-          : "text-gray-800 flex flex-col gap-4 min-h-screen px-4 pb-6 lg:px-0 bg-gradient-to-b from-gray-100 to-gray-300 to-85% transition-all duration-500 easy-in-out"
+          ? "text-gray-300 flex flex-col  min-h-screen px-4 pb-6 lg:pb-3 lg:px-0 bg-gradient-to-b from-gray-800 to-gray-900 to-85% transition-all duration-500 easy-in-out"
+          : "text-gray-800 flex flex-col  min-h-screen px-4 pb-6 lg:pb-3 lg:px-0 bg-gradient-to-b from-gray-100 to-gray-300 to-85% transition-all duration-500 easy-in-out"
       }
     >
       <NavBar />

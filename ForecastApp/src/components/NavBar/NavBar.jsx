@@ -3,6 +3,15 @@ import { TemaContext } from "../../context/themeContext";
 import { Container } from "../Container/Container";
 import { Button } from "../Button/Button";
 
+/**
+ * @description - Componente que muestra la barra de navegación de la aplicación
+ * @var {Object} tema - Objeto que contiene el tema (dark o light)
+ * @var {Object} toggleTema - Objeto que contiene la función que se ejecuta al hacer clic en el botón de cambio de tema
+ * @Button - Componente que muestra el botón de cambio de tema
+ * @Container - Componente que muestra el contenedor
+ *
+ * @return {JSX.Element} - El componente NavBar
+ */
 function NavBar() {
   const { tema, toggleTema } = useContext(TemaContext);
 

@@ -10,7 +10,7 @@ import { MessageError } from "../MessageError/MessageError.jsx";
  * @description Componente que muestra el hero de la aplicación
  * @param {number} latitude Latitud de la ubicación
  * @param {number} longitude Longitud de la ubicación
- * @param {Object} err Objeto que contiene el error
+ * @param {Object} err Objeto que contiene el error (default: null)
  * @var {Object} weather Objeto que contiene la información del clima
  * @var {Object} tema Objeto que contiene el tema
  * @var {Object} text Objeto que contiene el texto de la ubicación buscada
@@ -82,7 +82,7 @@ function Hero({ latitude, longitude, err = null }) {
     input.current.value = "";
   };
 
-  const keypress = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       searchCity();
     }
@@ -111,8 +111,8 @@ function Hero({ latitude, longitude, err = null }) {
     <Container
       style={
         tema === "dark"
-          ? "flex flex-col items-center justify-center gap-8 lg:gap-12"
-          : "flex flex-col items-center justify-center gap-8 lg:gap-12"
+          ? "flex flex-col items-center justify-center gap-5 "
+          : "flex flex-col items-center justify-center gap-5 "
       }
     >
       <Container style="flex flex-col items-center justify-center gap-4 w-full">
@@ -121,8 +121,8 @@ function Hero({ latitude, longitude, err = null }) {
             <p className="text-sm font-semibold text-center">For a more exact search, use the following nomenclature: Barcelona, es or Barcelona, ve</p>
           <Container style="flex items-end justify-center gap-2 w-full ">
             <Input
-              placeholder={"Ex: Barcelona or Barcelona,ve"}
-              onkeyPress={keypress}
+              placeholder={"Ex: New York, us or New York"}
+              onKeyDown={handleKeyDown}
               style={
                 "w-full p-2 outline-none border border-blue-900/50 rounded-lg placeholder:text-gray-500 transition-all duration-300 easy-in-out"
               }

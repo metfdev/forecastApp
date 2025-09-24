@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
 
+/**
+ * @description - Componente que obtiene la ubicación del usuario mediante la geolocalización del navegador
+ * @var {Object} location - Objeto que contiene la ubicación del usuario
+ * @var {Object} err - Objeto que contiene el error
+ *
+ * @return {Array} - Array que contiene la ubicación del usuario y el error
+ * @author Miguel Ticaray
+ */
 function LocationComponent() {
   const [location, setLocation] = useState(null);
   const [err, setError] = useState(null);
